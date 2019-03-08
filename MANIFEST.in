@@ -1,0 +1,2 @@
+include README.md LICENSE
+recursive-include i_know_python/data *.txt
