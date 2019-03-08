@@ -11,7 +11,7 @@ def run():
     unused = []
     welcome = "Welcome to 'I know Python'!\nAnswer these questions to the best of your ability.\n"
     print(welcome)
-    with open(libraries) as file:
+    with open(libraries, encoding='utf-8') as file:
         for line in file:
             line = line.strip()
             if '—' in line:
@@ -28,7 +28,7 @@ def run():
     print('='*12 + '\nUsed modules\n' + '='*12)
     for module in used:
         print(module)
-    print('\n' + '='*14 + 'Unused modules\n' + '='*14)
+    print('\n' + '='*14 + '\nUnused modules\n' + '='*14)
     for module in unused:
         print(module)
     print(f'\n# of used modules: {len(used)}\n# of unused modules: {len(unused)}')
